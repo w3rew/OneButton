@@ -28,10 +28,8 @@
 
 // ----- Callback function types -----
 
-extern "C" {
-typedef void (*callbackFunction)(void);
-typedef void (*parameterizedCallbackFunction)(void *);
-}
+typedef std::function<void()> callbackFunction;
+typedef std::function<void(void*)> parameterizedCallbackFunction;
 
 
 class OneButton
